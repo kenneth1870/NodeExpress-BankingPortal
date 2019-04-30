@@ -22,7 +22,7 @@ const userData = fs.readFileSync(
 const users = JSON.parse(userData);
 
 app.get('/', (req, res) => res.render('index', {
-  title: 'Account Summaty',
+  title: 'Account Summary',
   accounts
 }));
 
@@ -34,7 +34,7 @@ app.get('/checking', (req, res) => res.render('account', {
   account: accounts.checking
 }));
 
-app.get('/checking', (req, res) => res.render('account', {
+app.get('/credit', (req, res) => res.render('account', {
   account: accounts.credit
 }));
 
